@@ -17,20 +17,31 @@ const BABEL_REACT_PRESET_PACKAGES = [
   'react'
 ].map(pack => `@babel/preset-${pack}`);
 
-const WEBPACK_PACKAGES = [
-  'webpack',
-  'webpack-cli',
-  'babel-loader',
+const WEBPACK_LOADERS = [
   'html-webpack-plugin',
   'clean-webpack-plugin',
   'webpack-dev-server',
 ];
+
+const WEBPACK_PLUGINS = [
+  'babel-loader',
+  'css-loader',
+  'file-loader',
+];
+
+const WEBPACK_TOOLS = [
+  'webpack',
+  'webpack-cli',
+]
+
+const WEBPACK_PACKAGES = [...WEBPACK_LOADERS, ...WEBPACK_PLUGINS, ...WEBPACK_TOOLS];
 
 const LINTING_PACKAGES = [
   'flow-bin',
   'eslint',
   'babel-eslint',
   'eslint-plugin-flowtype',
+  'eslint-plugin-react',
 ];
 
 const DEVELOPMENT_PACKAGES = [...WEBPACK_PACKAGES, ...BABEL_REACT_PRESET_PACKAGES, ...BABEL_PACKAGES, ...LINTING_PACKAGES].join(' ');
