@@ -36,6 +36,7 @@ const main = async () => {
   await flowStrictConfig(interface, currentDirectory);
   await makeBasicConfig(interface, currentDirectory);
   await eslintBasicConfig(interface, currentDirectory);
+  await htmlSourceTemplate(interface, currentDirectory);
   interface.close();
 };
 
