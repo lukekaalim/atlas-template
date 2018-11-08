@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "quick cli tool to spit out a atlas-styled project framework",
   "bin": {
-    "atlas-template": "bin/index.js"
+    "atlas-template": "bin/index.js",
+    "atlas-template-package": "bin/pack.js"
   },
   "author": "luke kaalim",
   "license": "MIT"
