@@ -53,3 +53,8 @@ exports.initNpm = async (cwd) => {
   await executor(`npm i -S ${DEPENDENCY_PACKAGES}`);
   await executor(`npm i -D ${DEVELOPMENT_PACKAGES}`);
 };
+
+exports.install = async (cwd) => {
+  const executor = executeCommand(cwd);
+  await executor(`npm i`);
+};
