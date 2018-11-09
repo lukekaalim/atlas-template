@@ -1,20 +1,4 @@
 {
-  "name": "flow-babel-mini-lib",
-  "version": "1.0.0",
-  "description": "Build with atlas-template",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "make"
-  },
-  "keywords": [
-    "react",
-    "rich",
-    "text",
-    "simple",
-    "dumb"
-  ],
-  "author": "luke kaalim",
-  "license": "MIT",
   "peerDependencies": {
     "react": "^16.6.1"
   },
