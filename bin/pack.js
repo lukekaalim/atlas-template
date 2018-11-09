@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-const { install } = require('../commands/npm');
 
 const { copyPack, getPackDirectory } = require('../lib/copyPack');
 const { makeAll } = require('../commands/make');
+const { installNpm } = require('../commands/npm');
+const { initGit } = require('../commands/git');
 
 const main = async () => {
   const currentDirectory = process.cwd();
@@ -12,8 +13,8 @@ const main = async () => {
   const packDirectory = getPackDirectory(packType);
 
   await copyPack(packDirectory, currentDirectory);
-  await install(currentDirectory);
-  await makeAll(currentDirectory);
+  await installNpm(currentDirectory);
+  await initGit(currentDirectory);
 };
 
 main();
